@@ -34,7 +34,7 @@ class Book(models.Model):
     def display_genre(self):
         return ', '.join(genre.name for genre in self.genre.all()[:3])
 
-    display_genre.short_description = 'Genre'
+    display_genre.short_description = 'Genre'      # type: ignore
 
     def __str__(self):
 
