@@ -27,3 +27,10 @@ def index(request):
 
 class BookListView(generic.ListView):
     model = Book
+    paginate_by = 10
+    template_name = 'book_list.html'
+
+
+class BookDetailView(generic.DetailView):
+    model = Book
+    template_name = 'book_detail.html'
